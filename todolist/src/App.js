@@ -1,24 +1,36 @@
-import TodoList from "./TodoList";
+//import TodoList from "./TodoList";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import TodoContainer from "./TodoContainer";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import TodoContainer from "./components/TodoContainer";
 
 function App() {
   return (
     <Router>
-      <>
-        <Switch>
-          <Route exact path="/">
-            <TodoContainer tableName="Personal" />
-          </Route>
-          <Route path="/work">
-            <TodoContainer tableName="Work" />
-          </Route>
-          <Route path="/intentions">
-            <TodoContainer tableName="Intentions" />
-          </Route>
-        </Switch>
-      </>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Personal</Link>
+          </li>
+          <li>
+            <Link to="/work">Work</Link>
+          </li>
+          <li>
+            <Link to="intentions">Intentions</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Switch>
+        <Route exact path="/">
+          <TodoContainer tableName="Personal" />
+        </Route>
+        <Route path="/work">
+          <TodoContainer tableName="Work" />
+        </Route>
+        <Route path="/intentions">
+          <TodoContainer tableName="Intentions" />
+        </Route>
+      </Switch>
     </Router>
   );
 }

@@ -9,3 +9,8 @@ body {
 h1 {
   color: goldenrod;
 }
+
+ul {
+  color: goldenrod;
+  list-style-type: none;
+}

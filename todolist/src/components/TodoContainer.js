@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TodoList from "./TodoList";
 import AddTodoForm from "./AddTodoForm";
+import PropTypes from "prop-types";
 
 function TodoContainer(props) {
   const [todoList, setTodoList] = useState([]);
@@ -79,4 +80,7 @@ function TodoContainer(props) {
     </div>
   );
 }
+TodoContainer.propTypes = {
+  tableName: PropTypes.string,
+};
 export default TodoContainer;

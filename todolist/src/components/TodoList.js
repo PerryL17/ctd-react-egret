@@ -1,8 +1,8 @@
 import React from "react";
 import TodoListItem from "./TodoListItem";
+import PropTypes from "prop-types";
 
 function TodoList(props) {
-  //const { todoList } = props;
   return (
     <>
       <ul>
@@ -19,5 +19,7 @@ function TodoList(props) {
     </>
   );
 }
-
+TodoList.propTypes = {
+  todoList: PropTypes.array,
+};
 export default TodoList;
