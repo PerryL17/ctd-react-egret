@@ -1,21 +1,32 @@
-//import TodoList from "./TodoList";
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import TodoContainer from "./components/TodoContainer";
+import style from "./components/App.module.css";
+import Scissor from "./components/Scissor";
+import House from "./components/House";
+import LightBulb from "./components/LightBulb";
 
 function App() {
   return (
     <Router>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Personal</Link>
+        <ul className={style.navBar}>
+          <li className={style.navBox}>
+            <Link className={style.noUnderline} to="/">
+              <House />
+              Personal
+            </Link>
           </li>
-          <li>
-            <Link to="/work">Work</Link>
+          <li className={style.navBox}>
+            <Link className={style.noUnderline} to="/work">
+              <Scissor />
+              Work
+            </Link>
           </li>
-          <li>
-            <Link to="intentions">Intentions</Link>
+          <li className={style.navBox}>
+            <Link className={style.noUnderline} to="/intentions">
+              <LightBulb />
+              Intentions
+            </Link>
           </li>
         </ul>
       </nav>

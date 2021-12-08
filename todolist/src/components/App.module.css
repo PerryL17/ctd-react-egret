@@ -1,0 +1,15 @@
+.navBar {
+  background-color: rgb(46, 45, 45);
+}
+
+.navBox {
+  display: inline-block;
+  background-color: cadetblue;
+  border: 10px solid rgb(46, 45, 45);
+  height: 100px;
+  width: 100px;
+}
+
+.noUnderline {
+  text-decoration: none;
+}
